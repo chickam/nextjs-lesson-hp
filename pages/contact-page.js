@@ -1,14 +1,21 @@
 import Layout from "../components/Layout";
 import Image from "next/image";
-const Contact = () => {
-  return(
+
+export default function Contact() {
+  return (
     <Layout title="Contact">
       <div className="bg-white text-center shadow-xl p-8 w-80 rounded">
         <div className="mt-4">
           <p className="font-bold">Contact info</p>
         </div>
         <div className="flex justify-center mt-4">
-          <Image className="rounded-full" src="/avatar.jpg" width={60} height={60} alt="Avatar" />
+          <Image
+            className="rounded-full"
+            src="/avatar.jpg"
+            width={60}
+            height={60}
+            alt="Avatar"
+          />
         </div>
         <div className="mt-4">
           <p className="font-bold">Address</p>
@@ -19,7 +26,7 @@ const Contact = () => {
           <p className="text-xs mt-2 text-gray-600">000-0000-0000</p>
         </div>
         <div className="mt-6 flex justify-around">
-        <div>
+          <div>
             <a
               href="https://nerdcave.com/tailwind-cheat-sheet"
               target="_blank"
@@ -68,11 +75,8 @@ const Contact = () => {
               </svg>
             </a>
           </div>
-
         </div>
       </div>
     </Layout>
   );
-};
-
-export default Contact;
+}
